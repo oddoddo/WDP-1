@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+            color: #000;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('body').css({
+                'background-color' : 'lightgray',
+                'padding' : '20px'
+            })
+            $('#wrap').css({
+                'border' : '3px solid red'
+            })
+            $('.list').css({
+                'background-color' : 'lightpink' 
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#">menu1</a>
+            </li>
+            <li>
+                <a href="#">menu2</a>
+            </li>
+            <li>
+                <a href="#">menu3</a>
+            </li>
+            <li>
+                <a href="#">menu4</a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        $(function(){
+            $('nav ul').css({
+                'display' : 'flex'
+            })
+            $('nav li:even').css({
+                'background' : 'skyblue'
+            })
+            $('nav li:odd').css({
+                'background' : 'pink'
+            })
+            $('nav li:first-child').css({
+                'background' : 'orange'
+            })
+            // violet
+            $('nav li:nth-child(2)').css({
+                'background' : 'violet'
+            })
+        })
+    </script>
+
+
+    <div id="wrap">
+        wrap
+        <ul class="list">
+            ul
+            <li>
+                li
+                <span>span</span>
+                <span>span</span>
+            </li>
+            <li>
+                li
+                <a href="#">bbbbb</a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(function(){
+            // 부모만 선택
+            $('span').parent().css({
+                'background' : 'tomato'
+            })
+            // 조상 선택
+            $('span').parents('ul').css({
+                'border' : '3px solid blue'
+            })
+            // <span>과 <div> 사이의 모든 상위 요소
+            $('span').parentsUntil('div').css({
+                'border' : '3px solid yellow'
+            })
+        })
+    </script>
+
+    <br><br>
+    <ul class="list-2">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li class="on"><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+        <li><a href="#">menu5</a></li>
+        <li class="last"><a href="#">menu6</a></li>
+    </ul>
+    <script>
+        $(function(){
+            $('.list-2 li').first().css({
+                'background' : 'tomato'
+            })
+            $('.list-2 li').last().css({
+                'background' : 'aqua'
+            })
+            // 3번째 li 선택
+            $('.list-2 li').eq(2).css({
+                'background' : 'lightgreen'
+            })
+
+            // 요소.filter(조건) 
+            // 선택된 요소중에서 특정 성질의 요소를 추릴때 사용
+            $('.list-2 li').filter('.on').css({
+                'background' : 'indigo'
+            })
+
+            // 부모요소.find(자식요소) 
+            // 자식요소를 찾을때 사용
+            $('.list-2 li').find('a').css({
+                'border' : '3px solid #fff'
+            })
+
+
+            // not :  해당 요소를 제외한 나머지
+            $('.list-2 li').not('.last').css({
+                'background' : 'black'
+            })
+        })
+    </script>
+</body>
+
+</html>

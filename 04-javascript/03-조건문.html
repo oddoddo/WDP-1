@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 : js</title>
+    <script>
+        // if(조건){
+        //     참일 경우 실행될 명령문
+        // }else{
+        //      거짓일 경우 실행될 명령문
+        // }
+
+        let a = 2;
+        if(a + 1 === 2){
+            console.log('a+1=2입니다')
+        }else{
+            console.log('a+1=2가 아닙니다')
+        }
+        // 전역 변수
+        let b =1;
+        if(true){
+            // 지역 변수
+            let b = 2;
+            console.log('if문 안의 b값은 ' + b)
+        }
+        
+        console.log('if문 밖의 b값은 ' + b)
+
+        // if - else if 
+        let c  = 7;
+
+        if(c === 5){
+            console.log('5번 입니다. ')
+        }else if(c === 10){
+            console.log('10번 입니다.')
+        }else{
+            console.log('5번도 10번도 아닙니다.')
+        }
+
+        //switch / case 문
+
+        // switch(조건) {
+        //     case '조건' :
+        //         실행문
+        //         break
+        //     case '조건' : 
+        //         실행문
+        //         break
+        //     default:
+        //         실행문 (이도저도 아닐 경우)
+        // }
+
+
+        let device = 'iphone 12'
+
+        switch(device) {
+            case 'iphone 12' :
+                console.log('아이폰 12')
+                break
+            case 'galaxy 10+' : 
+                console.log('갤럭시 10+')
+                break
+            default:
+                console.log('모르겠어')
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

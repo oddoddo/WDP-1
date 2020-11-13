@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 : js</title>
+    <script>
+        const dog = {
+            // 키 : 원하는 값
+            name : '멍멍이',
+            age : 2,
+            kind : '개'
+        }
+
+        const cat = {
+            name : '야옹이',
+            age : 5,
+            kind : '고양이'
+        }
+
+        console.log(dog.name)
+        console.log(dog.age)
+
+        console.log(dog)
+        console.log(cat)
+
+        // 멍멍이(개)는 나이가 2살입니다.
+        function print(ani){
+            const text = `${ani.name}(${ani.kind})는 나이가 ${ani.age}살입니다`
+            console.log(text)
+        }
+
+        print(dog)
+        print(cat)
+
+
+
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>

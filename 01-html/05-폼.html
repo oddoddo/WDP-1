@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 : html</title>
+</head>
+
+<body>
+    <h1>form</h1>
+
+    <form action="">
+        <fieldset>
+            <legend>회원가입</legend>
+
+            <!-- 단순 링크 -->
+            <a href="#">확인</a>
+            <!-- 정보를 서버로 보낼 때 -->
+            <input type="button" value="확인"> <br>
+            <hr>
+            <!-- checkbox : 복수선택 -->
+            <input type="checkbox" id="photo"> <label for="photo">포토샵</label>   
+            <input type="checkbox" id="illust"> <label for="illust">일러스트</label><br>
+
+            <!-- radio : 단일선택 -->
+            <input type="radio" name="sex" id="man"> <label for="man">남</label>
+            <input type="radio" name="sex" id="female"> <label for="female">여</label>  <br>
+            <hr>
+
+
+            <input type="color"> <br>
+            <input type="date"> <br>
+            <input type="datetime-local"> <br>
+            <input type="file"> <br>
+            <input type="hidden"> <br>
+            <input type="image" src="url"> <br>
+            <input type="month"> <br>
+            <input type="number"> <br>
+
+            <!-- 폰트를 굴림체나 돋움체 (일반폰트) 사용 -->
+            <input type="password"> <br>
+
+            <input type="range"> <br>
+            <!-- 확인 버튼 : 서버로 정보를 넘겨 -->
+            <input type="submit" value="확인"> <br>
+            <!-- 취소 버튼 -->
+            <input type="reset" value="취소"> <br>
+            <input type="search"> <br>
+            <hr>
+            <!-- 역할에 따라 모바일 자판이 변경됨 -->
+            <!-- placeholder 예시,  value 실제 값 -->
+            <input type="email"> <br>
+
+            <!-- 폰번호 넣기 -->
+            <label for="phone">핸드폰 번호</label>
+            <select name="" id="phone">
+                <option value="통신사 선택">통신사 선택</option>
+                <option value="010">010</option>
+                <option value="011">011</option>
+                <option value="016">016</option>
+                <option value="019">019</option>
+            </select>
+            -  <input type="tel" placeholder="3111" title="번호 가운데 4자리"> 
+            - <input type="tel" placeholder="2469" title="번호 끝 4자리"> <br>
+
+            <input type="text" placeholder="아이디"> <br>
+            <input type="time"> <br>
+            <input type="url"> <br>
+            <input type="week">
+
+            <hr>
+            <textarea name="" id="" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat commodi ducimus dolor illum harum ab ipsum, corrupti voluptate assumenda obcaecati, asperiores quo omnis? Quaerat perspiciatis quisquam fugit corrupti adipisci sint!
+            </textarea>
+
+        </fieldset>
+    </form>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boxModel</title>
+</head>
+<body>
+    <h1>boxModel</h1>
+    <h2>높이의 상대값</h2>
+    <style>
+        .box1 {
+            width: 100px; height: 300px;
+        }
+        .box2 {
+            height: 100%;
+        }
+        .box3 {
+            width: 100%; height: 100%;
+            background: tomato;
+        }
+    </style>
+    <div class="box1">
+        <div class="box2">
+            <div class="box3">box3</div>
+        </div>
+    </div>
+
+    <h2>max-width : 최대 가로사이즈</h2>
+    <style>
+        .wrap-max {
+            width: 100%;height: 500px;
+            max-width: 1280px;
+            margin: auto; /* block요소를 가운데 정렬할 때 */
+            background: lightgray;
+        }
+    </style>
+
+    <div class="wrap-max">
+        max-width
+    </div>
+    <br>
+    <h2>min-width : 최소 가로사이즈</h2>
+    <style>
+        .wrap-min {
+            width: 100%;height: 500px;
+            min-width: 700px;
+            background: lightgray;
+        }
+    </style>
+    <div class="wrap-min">
+        min-width
+    </div>
+
+    <br>
+    <style>
+        .wrap-max-min {
+            width: 100%;height: 500px;
+            max-width: 1280px; min-width: 700px;
+            margin: auto; /* block요소를 가운데 정렬할 때 */
+            background: lightgray;
+        }
+    </style>
+    <div class="wrap-max-min">
+        wrap-max-min
+    </div>
+
+
+    <h2>padding</h2>
+    <style>
+        .p-g {
+            display: inline-block;
+            background: lightgray;
+        }
+        .p-1 {
+            padding: 10px 20px 80px 50px;
+        }
+        .p-2 {
+            padding: 20px;
+        }
+        .p-3 {
+            padding: 10px 20px;
+        }
+        .p-4   {
+            padding: 10px 20px 30px;
+        }
+    </style>
+    <a href="#" class="p-g p-1">btn1</a>
+    <a href="#" class="p-g p-2">btn2</a>
+    <a href="#" class="p-g p-3">라이트박스 보기</a>
+    <a href="#" class="p-g p-4">btn4</a>
+
+    <h2>padding boxsizing</h2>
+    <style>
+        .padding {
+            /* 실제 사이즈는 w300, h100 */
+            width: 200px;height: 0;
+            padding: 50px;
+            background: tomato;
+        }
+        .padding-boxsizing {
+            width: 300px;height: 100px;
+            padding: 50px;
+            background: purple;
+            box-sizing: border-box;
+        }
+    </style>
+    <div class="padding">
+        padding
+    </div>
+    <div class="padding-boxsizing">
+        padding-boxsizing
+    </div>
+
+    <h2>margin</h2>
+    <style>
+        .m-g {
+            width: 300px;height: 100px;
+            background: aqua;
+        }
+        .m-1 {
+            margin: 20px;
+        }
+        .m-2 {
+            margin: 20px 10px 50px 100px;
+        }
+        .m-3 {
+            margin: 200px auto 0;
+        }
+        .m-4 {
+            margin-bottom: 50px;
+            margin-right: 30px;
+            margin-top: 10px;
+            margin-left: 40px;
+        }
+    </style>
+    <p class="m-g m-1">margin1</p>
+    <p class="m-g m-2">margin2</p>
+    <p class="m-g m-3">margin3</p>
+    <p class="m-g m-4">margin4</p>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 : html</title>
+    <style>
+        .wrap {
+            width: 1200px;
+            margin: auto;
+            background: LightGray;
+        }
+        #header {
+            display: flex;
+            justify-content: space-between;
+            background: tomato;
+        }
+        .slide ul {
+            display: flex;
+        }
+        .container {
+            display: flex;
+        }
+        .container section {
+            width: 33.333%;
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header id="header">
+            <h1>
+                <a href="#">JUST쇼핑몰</a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="#">menu-1</a></li>
+                    <li><a href="#">menu-2</a></li>
+                    <li><a href="#">menu-3</a></li>
+                    <li><a href="#">menu-4</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="slide">
+            <ul>
+                <li>슬라이드-1</li>
+                <li>슬라이드-2</li>
+                <li>슬라이드-3</li>
+            </ul>
+        </div>
+        <div class="container">
+            <section>
+                <h2>공지사항</h2>
+                <div class="cont">내용</div>
+            </section>
+            <section>
+                <h2>배너</h2>
+                <div class="cont">내용</div>
+            </section>
+            <section>
+                <h2>바로가기</h2>
+                <div class="cont">내용</div>
+            </section>
+        </div>
+        <footer>
+            <h1>
+                <a href="#">로고</a>
+            </h1>
+            <div class="copyright">copyright</div>
+            <div class="sns">sns</div>
+        </footer>
+    </div>
+</body>
+</html>

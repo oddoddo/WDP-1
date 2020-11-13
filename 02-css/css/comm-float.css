@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* reset */
+* {
+    margin: 0; 
+    padding: 0;
+    list-style: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #000;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.wrap {
+    width: 1200px;
+    margin: 0 auto; /* block요소를 가운데 정렬 */
+}
+header {
+    /* float 해제 방법 */
+    height: 100px;
+    /* overflow: hidden; */
+    background: rgba(240, 128, 128, 0.5);
+}
+header h1 {
+    float: left;
+}
+header nav {
+    float: right;
+}
+.nav-depth1 li {
+    float: left;
+}
+
+.slide ul {
+    overflow: hidden;
+}
+.slide li {
+    float: left;
+    width: 30%; height: 300px;
+    margin-right: 5%;
+    background: tomato;
+}
+.slide li:last-child {
+    margin-right: 0;
+}
+/* float 해제 */
+.clear-g::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+.container section {
+    float: left;
+}
+
+footer {
+    background: lightgray;
+}
+footer h1 {
+    float: left;
+    width: 10%;
+}
+footer .copyright {
+    float: left;
+    width: 30%;
+}
+footer .sns {
+    float: right;
+    width: 20%;
+}

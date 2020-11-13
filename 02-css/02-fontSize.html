@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font : html</title>
+    <style>
+        * {
+            margin: 0;padding: 0;
+            list-style: none;
+            font-size: 14px; font-family: '나눔스퀘어', serif;
+            color: #222;
+            line-height: 1.5;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>font</h1>
+
+    <h2>단위 em</h2>
+    <style>
+        .txt1 {
+            /* font-size: 14px; */
+            line-height: 1.5;
+            /* line-height는 폰트 크기의 1.5배 */
+        }
+        .txt2 {font-size: 2.14em;}
+        /* 부모 사이즈를 기준으로... 자식 사이즈를 계산 */
+        .txt2 span {display: block; font-size: 0.6em;}
+        .txt3 {font-size: 1.42em;}
+        .txt3 span {
+            /* rem : 기준이 부모가 아니라 html */
+            font-size: 1.28rem;
+        }
+        .txt4 {font-size: 1.07em;}
+        .txt5 {font-size: 0.85em;}
+    </style>
+    <p class="txt1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequuntur cupiditate tenetur commodi esse quis suscipit vitae odit animi, sunt eveniet totam. Unde, totam a. Ipsa natus ad beatae omnis!</p>
+    <p class="txt2">
+        <!-- font-size : 30px -->
+        더조은컴퓨터아카데미
+        <!-- font-size : 18px -->
+        <span>웹디자인(웹퍼블리싱)</span>
+    </p>
+    <p class="txt3">
+        <!-- font-size : 20px -->
+        더조은컴퓨터아카데미
+        <!-- font-size : 18px -->
+        <span>웹디자인(웹퍼블리싱)</span>
+    </p>
+    <p class="txt4">더조은컴퓨터아카데미</p>
+    <p class="txt5">
+        더조은컴퓨터아카데미
+
+    </p>
+ 
+    <br><br><br>
+    <h2>단위 vw, vh</h2>
+    <!-- 뷰포트를 기준으로 -->
+    <style>
+        .box {
+            display: inline-block;
+            width: 100vw;
+            height: 100vh;
+            background: tomato;
+        }
+        .box2 {
+            height: 100vh;
+            background: greenyellow;
+        }
+    </style>
+    <div class="box">
+        ddd
+    </div>
+    <div class="box2">
+        ddd
+    </div>
+
+
+
+    <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br>
+</body>
+</html>

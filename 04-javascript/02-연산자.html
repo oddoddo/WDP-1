@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자 : js</title>
+    <script>
+        // 연산자
+        let value = 1; // 변수 선언
+        value = 2; // 대입 연산자
+
+        // 산술 연산자
+        let a = 1 + 2
+        console.log(a)
+
+        a = 1 + 2 + (3 * 4) / 5
+        console.log(a)
+
+        // 증감 연산자
+        let b = 1
+        console.log(b++) // 2 (더하기 직전의 값이 보여주기 때문에 1이 출력 됨)
+        console.log(++b) // 2+1 = 3 (더한 다음의 값이 출력 됨)
+
+        // 대입 연산자 
+        let c = 1;
+        c += 3 //c = c + 3;
+        console.log(c)
+
+        //논리 연산자
+        // NOT
+        const d = !true
+        console.log(d)
+
+        // AND (둘 다 참이어야 참)
+        const e = true && true
+        console.log(e)
+
+        const f = true && false
+        console.log(f)
+
+        //OR
+        const g = true || false
+        console.log(g)
+
+        // 연산의 순서
+        const h = !((true && false) || (true && false) || !false);
+        console.log(h)
+
+
+        // 비교 연산자 
+        // 두 값이 일치하는지 확인(===)
+        const aa = '1'
+        const bb = 1
+        console.log(aa === bb)
+
+        // 두 값이 일치하지 않는 확인 (!==)
+        const cc = 'a' !== 'b';
+        console.log(cc) // true
+
+        // 크고 작음 비교
+        const aaa = 10;
+        const bbb = 15;
+        const ccc = 15;
+
+        console.log(aaa < bbb); // true
+        console.log(bbb > aaa); // true
+        console.log(bbb >= ccc); // true
+        console.log(aaa <= ccc); // true
+        console.log(bbb < ccc); // false;
+
+        // 문자열 붙이기
+        const ddd = '안녕하세요. 저는'
+        const eee = '저는 오다다입니다.'
+        console.log(ddd + '저는 오다다입니다.')
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

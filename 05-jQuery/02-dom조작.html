@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 조작</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- html set -->
+    <script>
+        $(function(){
+            $('#btn1').click(function(){
+                $('.text').text('안녕하세요. <br> 전 오다다입니다.')
+            })
+
+            $('#btn2').click(function(){
+                $('.html').html('<b>안녕하세요. <br> 전 오다다입니다.</b>')
+            })
+        })
+    </script>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+    <br>
+
+    <div class="text"></div>
+    <div class="html"></div>
+
+    <!-- get, set -->
+    <script>
+        $(function(){
+            $('.btn-val').click(function(){
+                alert('내가 좋아하는 캐릭터는' + $('#val').val() + '입니다.')
+                $('#val').val('스파이더맨')
+            })
+        })
+    </script>
+    <h1>val()</h1>
+    <p>Name:
+        <input type="text" id="val" value="Mickey Mouse"></p>
+
+    <button class="btn-val">Show Value</button>
+
+    <script>
+        $(function(){
+            $('.btn-attr').click(function(){
+                alert($('#w3s').attr('href'))
+                $('#w3s').text('Naver').attr('href','https://www.naver.com')
+            })
+        })
+    </script>
+    <h1>attr()</h1>
+    <p>
+        <a href="https://www.w3schools.com" id="w3s">W3Schools.com</a>
+    </p>
+
+    <button class="btn-attr">Show href Value</button>
+
+    <br><br><br><br>
+    <!-- 전구 켜기 -->
+    <script>
+        $(function(){
+            $('#btnOn').click(function(){
+                $('.img-bulb').attr('src', './images/pic_bulbon.gif')
+            })
+            $('#btnOff').click(function(){
+                $('.img-bulb').attr('src', './images/pic_bulboff.gif')
+            })
+        })
+    </script>
+    <img src="./images/pic_bulboff.gif" class="img-bulb" alt="">
+
+    <button id="btnOn">전구 켜기</button>
+    <button id="btnOff">전구 끄기</button>
+    <br><br>
+
+    <!-- 요소 추가하기 -->
+    <script>
+        $(function(){
+            $('.add a').prepend('<b>태그 내 앞쪽 / </b>')
+            $('.add a').append('<b> / 태그 내 뒤쪽</b>')
+            $('.add a').before('태그 밖 앞쪽 / ')
+            $('.add a').after('태그 밖 뒤쪽 / ')
+        })
+    </script>
+    <ul class="add">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+        <li><a href="#">menu5</a></li>
+    </ul>
+
+
+    <!-- 요소 제거하기 -->
+    <script>
+        $(function(){
+            $('.remove li').eq(0).remove()
+            $('.remove li').eq(2).empty()
+        })
+    </script>
+    <ul class="remove">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+
+</body>
+
+</html>

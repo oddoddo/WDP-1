@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>ANIMATION</title> 
+</head> 
+<body>
+    <p>
+        Animation..
+    </p>
+    <style>
+        p {
+            position: absolute;top: 0;left: 0;
+            width: 200px; height: 100px;
+            background: red;
+            color: #fff;
+            text-align: center;line-height: 100px;
+            animation-name: ain;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+  animation-direction: alternate;
+        }
+        @keyframes ain {
+            0% {background: red;top: 0;left: 0;}
+            25% {background: yellow;top: 0;left: 100px;}
+            50% {background: green;top: 200px;left: 200px;}
+            75% {background: blue;top: 200px;left: 100px;}
+            100% {background: purple;top: 0;left: 0;}
+        }
+    </style>
+
+    <div class="box">
+        <div class="square"></div>
+        <div class="circle"></div>
+    </div>
+    
+
+    <style>
+        .box {
+            position: relative;
+            height: 400px;
+            margin: 400px 0 200px;
+            background: lightgray;
+        }
+        .square {
+            position: absolute;top: 0;left: 0;
+            width: 100px;height: 200px;
+            background: tomato;
+            opacity: 0;
+            animation-name: ani-s;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes ani-s {
+            0% {opacity: 0;top: 0;left: 0;}
+            100% {opacity: .7;top: 40%;left: 40%;}
+        }
+        .circle {
+            position: absolute;
+            width: 100px;height: 100px;
+            background: blue;
+            border-radius: 50%;
+            opacity: 0;
+            animation-name: ani-c;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+            animation-delay: .5s;
+        }
+        @keyframes ani-c {
+            0% {opacity: 0;bottom: 0;right: 0;}
+            100% {opacity: .7;bottom: 40%;right: 40%;}
+        }
+
+    </style>
+</body> 
+</html>

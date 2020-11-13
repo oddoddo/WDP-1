@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;padding: 0;
+    font-size: 16px;color: #000; line-height: 1.5;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+header h1 a {
+    display: block;
+    width: 140px;
+    height: 100px;
+    background: url(../images/logo.png) 50% no-repeat;
+    text-indent: -9999px;
+}
+.nav-depth1 {
+    display: flex;
+}
+.nav-depth1 > li > a {
+    display: block;
+    height: 100px;
+    padding: 40px 50px 0;
+}
+.nav-depth1 > li:hover > a {
+    border-bottom: 3px solid #000;
+}
+.nav-depth2 {
+    position: relative;z-index: 100;
+    background: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s;
+}
+.nav-depth1 li:hover .nav-depth2 {
+    max-height: 200px;
+}
+.nav-depth2 a {
+    display: block;
+    padding: 5px 0;
+    text-align: center;
+}
+.nav-depth2 a:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* w1200 h300 */
+.slide {
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+    background: lightgray;
+}
+.slide ul {
+    display: flex;
+    position: absolute;top: 0;left: 0;
+}
+.slide img {
+    width: 1200px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 50%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 320px;
+    padding: 20px 0;
+}
+.container > section, .tab  {
+    width: 32%;
+}
+.tab {
+    position: relative;
+    display: flex;
+}
+.tab section {
+    height: 50px;
+}
+.tab h2 {
+    cursor: pointer;
+    width: 192px;
+    height: 50px;
+    background: lightgray;
+    text-align: center;line-height: 50px;
+}
+.tab .cont {
+    display: none;
+    position: absolute;top: 70px;left: 0;
+    width: 100%;
+}
+.tab .on h2 {
+    background: yellow;
+}
+.tab .on .cont {
+    display: block;
+}
+.tab .cont .lst-gallery {
+    display: flex;
+    justify-content: space-between;
+}
+.tab .cont img {
+    width: 100%;
+}
+.lst-bbs a {
+    display: block;
+    padding: 5px 0;
+}
+.lst-bbs span {
+    float: right;
+    font-family: verdana;
+    font-size: 13px;
+    color: #999;
+}
+.lst-gallery li {
+    width: 32%;
+}
+/* 시험에서는 object-fit 사용하지 마세요. ie에서 안먹음 */
+.lst-gallery img {
+    width: 100%;
+    height: 209px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.col2 h2, .col3 h2 {
+    text-indent: -9999px;
+    font-size: 0;line-height: 0;
+    overflow: hidden;
+}
+.col3 .cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 100%;
+}
+.col3 a {
+    display: block;
+    width: 49%; height: 49%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
+.col3 img {
+    display: block;
+    margin: 25px auto 10px;
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 30px;
+    background: lightgray;
+}
+.copyright address {
+    font-style: normal;
+}
+.sns a {
+    padding: 10px;
+}
+
+#modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;top: 0;left: 0;right: 0;bottom: 0;
+    background: rgba(0,0,0,.8);
+}
+#modal .inner {
+    position: relative;
+    display: inline-block;
+    border-radius: 35px;
+    border: 3px solid #fff;
+}
+#modal button {
+    position: absolute;top: -35px;right: -35px;
+    width: 70px;height: 70px;
+    background: #fff;
+    border-radius: 50%;
+    border: none;
+}
+#modal img {
+    display: block;
+}
