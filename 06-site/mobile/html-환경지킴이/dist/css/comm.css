@@ -1,0 +1,46 @@
+@import url("./reset.css");
+/* clearfix */
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  padding: 42px 0 50px;
+  background: #326DD1 url(../../images/bg-dot.png) 0 0 no-repeat;
+  background-size: cover;
+}
+
+header {
+  color: #fff;
+  text-align: center;
+}
+
+header h1 {
+  margin-top: 4px;
+  font-size: 2.625em;
+}
+
+.img-waterdrop {
+  width: 70%;
+  /* min-width: 272px; */
+  height: 306px;
+  margin: auto;
+  background: url(../../images/img-waterdrop.png) 50% 0 no-repeat;
+  background-size: contain;
+}
+
+footer {
+  width: 87px;
+  height: 34px;
+  margin-top: auto;
+  background: url(../../images/logo-me.png) 0 0 no-repeat;
+  text-indent: -9999px;
+}
+/*# sourceMappingURL=comm.css.map */
