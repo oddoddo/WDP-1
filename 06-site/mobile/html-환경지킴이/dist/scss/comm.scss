@@ -1,0 +1,150 @@
+@charset "UTF-8";
+@import url('./reset.css');
+@import 'variables';
+@import 'mixin';
+
+// body {background: url(../../pc.png) 50% -25px no-repeat;background-size: 100% auto;}.wrap {opacity: .5;}
+// pc 버전
+.wrap.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding:  42px 0 50px;
+  background: #326DD1 url(../../images/bg-dot.png) 0 0 no-repeat;
+  background-size: cover;
+}
+header {
+  color: #fff;
+  text-align: center;
+  h1 {
+    margin-top: 4px;
+    font-size: 2.625em;
+  }
+}
+
+.img-waterdrop {
+  width: 70%; /* width: 272px; */height: 306px;
+  margin: auto;
+  background: url(../../images/img-waterdrop.png) 50% 0 no-repeat;
+  background-size: contain;
+}
+.wrap {
+  position: relative;
+}
+.wrap.bg-black {
+  height: 100vh;
+  background: #303036;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  h1 {
+    font-size: 1.6em;
+    color: #fff;
+  }
+  .nav-open {
+    position: absolute;top: 0;left: 20%;
+    width: 80%;height: 100%;
+    padding: 40px 0;
+    background: #fff;
+  }
+  .tit-wrap {
+    color: #000;
+  }
+  .nav-depth1 {
+    padding: 20px 0;
+    li {
+      &.on {
+        a {
+          background: #F9F9F9;
+          border-left: 5px solid #3399FB;
+        }
+      }
+      a {
+        display: block;
+        padding: 20px 0 20px 40px;
+        text-align: left;
+      }
+      i {
+        display: inline-block;
+        margin: -2px 3px 0 0;
+        font-size: 1.250em;
+        vertical-align: middle;
+      }
+      
+    }
+  }
+}
+#nav-ham {
+  position: fixed;top: 27px;right: 18px;
+  z-index: 1000;
+}
+#nav-ham + .nav-open {
+  display: none;
+}
+#nav-ham:checked + .nav-open {
+  display: block;
+}
+
+
+
+
+
+
+
+
+/* 2배 이미지 분기대응 */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+    .img-waterdrop {
+      background-image:url(../../images/img-waterdrop@2x.png);
+      // 백그라운드 사이즈는 1배 이미지 크기로 넣어준다.
+      -webkit-background-size:272px 306px;
+      background-size:272px 306px;
+    }
+}
+
+/* 3배 이미지 분기대응 */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 3),
+only screen and (min-device-pixel-ratio: 3) {
+    .img_g {
+      background-image:url(../../images/img-waterdrop@3x.png);
+      -webkit-background-size:272px 306px;
+      background-size:272px 306px}
+}
+
+footer {
+  width: 87px; height: 34px;
+  margin-top: auto;
+  background: url(../../images/logo-me.png) 0 0 no-repeat;
+  text-indent: -9999px;
+}
+
+// max-width: 480px (가로 사이즈가 480px 이하일 경우)
+// 가로 사이즈가 480px 이상일 경우
+@media screen and (min-width: 480px) {
+  .wrap {
+    padding: 110px 0;
+  }
+  header {
+    h1 {
+      font-size: 5.625em;
+    }
+    em {
+      font-size: 2em;
+    }
+  }
+  .img-waterdrop {
+    height: 445px;
+    background-size: contain;
+  }
+  footer {
+    background-image: url(../../images/logo-me@2x.png);
+    background-size: contain;
+    transform: scale(2);
+  }
+}
