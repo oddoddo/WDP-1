@@ -78,14 +78,67 @@ header {
   }
 }
 #nav-ham {
-  position: fixed;top: 27px;right: 18px;
-  z-index: 1000;
+  // position: fixed;top: 27px;right: 18px;
+  // z-index: 1000;
+  position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
 }
-#nav-ham + .nav-open {
+// #this ~ : #this(나 포함 안돼) 다음부터 내 동생들 중...
+// #this + : #this(나 포함 안돼) 다음 동생
+#nav-ham ~ .nav-open {
   display: none;
 }
-#nav-ham:checked + .nav-open {
+#nav-ham:checked ~ .nav-open {
   display: block;
+}
+#nav-ham:checked ~ .nav-bg {
+    position: fixed;top: 0;left: 0;right: 0;bottom: 0;
+    background: rgba(0,0,0,.8);
+}
+#nav-ham:checked + label {
+  background: #fff;
+  &::before {
+    top: 0;
+    background: #3399FB;
+    transform: rotate(45deg);
+  }
+  &::after {
+    top: 0;
+    background: #3399FB;
+    transform: rotate(-45deg);
+  }
+}
+nav {
+  // position: relative;
+  label {
+    position: absolute;top: 20px;right: 20px;z-index: 1100;
+    display: block;
+    width: 30px;height: 5px;
+    background: #fff;
+    border-radius: 5px;
+    &::before{
+      position: absolute;top: -8px;left: 0;
+      display: block;
+      width: 30px;height: 5px;
+      content: '';
+      background: #fff;
+      border-radius: 5px;
+      transition: all .2s;
+    }
+    &::after{
+      position: absolute;top: 8px;left: 0;
+      display: block;
+      width: 30px;height: 5px;
+      content: '';
+      background: #fff;
+      border-radius: 5px;
+      transition: all .2s;
+    }
+  }
 }
 
 

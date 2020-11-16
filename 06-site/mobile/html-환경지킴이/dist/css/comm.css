@@ -98,18 +98,87 @@ header .nav-depth1 li i {
 }
 
 #nav-ham {
-  position: fixed;
-  top: 27px;
-  right: 18px;
-  z-index: 1000;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
 }
 
-#nav-ham + .nav-open {
+#nav-ham ~ .nav-open {
   display: none;
 }
 
-#nav-ham:checked + .nav-open {
+#nav-ham:checked ~ .nav-open {
   display: block;
+}
+
+#nav-ham:checked ~ .nav-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#nav-ham:checked + label {
+  background: #fff;
+}
+
+#nav-ham:checked + label::before {
+  top: 0;
+  background: #3399FB;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#nav-ham:checked + label::after {
+  top: 0;
+  background: #3399FB;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+nav label {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1100;
+  display: block;
+  width: 30px;
+  height: 5px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+nav label::before {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 5px;
+  content: '';
+  background: #fff;
+  border-radius: 5px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+nav label::after {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 5px;
+  content: '';
+  background: #fff;
+  border-radius: 5px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 /* 2배 이미지 분기대응 */
