@@ -3,12 +3,9 @@
 @import 'variables';
 @import 'mixin';
 
-// body {
-//   background: url(../../pc.png) 50% 0 no-repeat;
-//   background-size: 100% auto;
-// }
-
-.wrap {
+// body {background: url(../../pc.png) 50% -25px no-repeat;background-size: 100% auto;}.wrap {opacity: .5;}
+// pc 버전
+.wrap.intro {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +13,6 @@
   padding:  42px 0 50px;
   background: #326DD1 url(../../images/bg-dot.png) 0 0 no-repeat;
   background-size: cover;
-  // opacity: .5;
 }
 header {
   color: #fff;
@@ -28,10 +24,209 @@ header {
 }
 
 .img-waterdrop {
-  width: 70%; /* min-width: 272px; */height: 306px;
+  width: 70%; /* width: 272px; */height: 306px;
   margin: auto;
   background: url(../../images/img-waterdrop.png) 50% 0 no-repeat;
   background-size: contain;
+}
+.wrap {
+  position: relative;
+}
+.wrap.bg-black {
+  height: 100vh;
+  background: #303036;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  h1 {
+    font-size: 1.6em;
+    color: #fff;
+  }
+  .nav-open {
+    position: fixed;top: 0;left: 20%;
+    width: 80%;height: 100%;
+    padding: 40px 0;
+    background: #fff;
+  }
+  .tit-wrap {
+    color: #000;
+  }
+  .nav-depth1 {
+    padding: 20px 0;
+    li {
+      &.on {
+        a {
+          background: #F9F9F9;
+          border-left: 5px solid $blueb;
+        }
+      }
+      a {
+        display: block;
+        padding: 20px 0 20px 40px;
+        text-align: left;
+      }
+      i {
+        display: inline-block;
+        margin: -2px 3px 0 0;
+        font-size: 1.250em;
+        vertical-align: middle;
+      }
+      
+    }
+  }
+}
+#nav-ham {
+  // position: fixed;top: 27px;right: 18px;
+  // z-index: 1000;
+  position: fixed;top: 0;left: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+// #this ~ : #this(나 포함 안돼) 다음부터 내 동생들 중...
+// #this + : #this(나 포함 안돼) 다음 동생
+#nav-ham ~ .nav-open {
+  transform: translateX(100%);
+  transition: transform .5s;
+}
+#nav-ham:checked ~ .nav-open {
+  transform: translateX(0);
+}
+#nav-ham:checked ~ .nav-bg {
+  @include fixed;left: 0;right: 0;bottom: 0;
+    background: rgba(0,0,0,.8);
+}
+#nav-ham:checked + label {
+  background: #fff;
+  &::before {
+    top: 0;
+    background: $blue;
+    transform: rotate(45deg);
+  }
+  &::after {
+    top: 0;
+    background: $blue;
+    transform: rotate(-45deg);
+  }
+}
+.nav-gnb {
+  // position: relative;
+  label {
+    position: fixed;top: 30px;right: 20px;z-index: 1100;
+    display: block;
+    width: 30px;height: 5px;
+    background: #fff;
+    border-radius: 5px;
+    &::before{
+      position: absolute;top: -8px;left: 0;
+      display: block;
+      width: 30px;height: 5px;
+      content: '';
+      background: #fff;
+      border-radius: 5px;
+      transition: all .2s;
+    }
+    &::after{
+      position: absolute;top: 8px;left: 0;
+      display: block;
+      width: 30px;height: 5px;
+      content: '';
+      background: #fff;
+      border-radius: 5px;
+      transition: all .2s;
+    }
+  }
+}
+
+.nav-foot {
+  position: fixed;bottom: 0;left: 0;right: 0;
+  height: 55px;
+  background: #fff;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    a {
+      display: block;
+      padding: 9px 20px;
+      font-size: 12px;
+    }
+  }
+  li{
+    &.on a {
+      color: $blue;
+    }
+    &:first-child {
+      span {
+        display: block;
+        margin: 0 auto 5px;
+        width: 22px; height: 21px;
+        background-position: 0 0;
+      }
+      &.on span {
+        background-position: 0 -28px;
+      }
+    }
+    &:nth-child(2) {
+      span {
+        display: block;
+        margin: 0 auto 5px;
+        width: 21px; height: 21px;
+        background-position: -24px 0;
+      }
+      &.on span {
+        background-position: -24px -28px;
+      }
+    }
+    &:nth-child(3) {
+      span {
+        display: block;
+        margin: 0 auto 3px;
+        width: 20px; height: 23px;
+        background-position: -48px 0;
+      }
+      &.on span {
+        background-position: -48px -28px;
+      }
+    }
+    &:last-child {
+      span {
+        display: block;
+        margin: 0 auto 5px;
+        width: 21px; height: 21px;
+        background-position: -68px 0;
+      }
+      &.on span {
+        background-position: -68px -28px;
+      }
+    }
+  }
+}
+
+/* 2배 이미지 분기대응 */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+    .img-waterdrop {
+      background-image:url(../../images/img-waterdrop@2x.png);
+      // 백그라운드 사이즈는 1배 이미지 크기로 넣어준다.
+      -webkit-background-size:272px 306px;
+      background-size:272px 306px;
+    }
+}
+
+/* 3배 이미지 분기대응 */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 3),
+only screen and (min-device-pixel-ratio: 3) {
+    .img_g {
+      background-image:url(../../images/img-waterdrop@3x.png);
+      -webkit-background-size:272px 306px;
+      background-size:272px 306px}
 }
 
 footer {
@@ -39,4 +234,29 @@ footer {
   margin-top: auto;
   background: url(../../images/logo-me.png) 0 0 no-repeat;
   text-indent: -9999px;
+}
+
+// max-width: 480px (가로 사이즈가 480px 이하일 경우)
+// 가로 사이즈가 480px 이상일 경우
+@media screen and (min-width: 480px) {
+  .wrap {
+    padding: 110px 0;
+  }
+  header {
+    h1 {
+      font-size: 5.625em;
+    }
+    em {
+      font-size: 2em;
+    }
+  }
+  .img-waterdrop {
+    height: 445px;
+    background-size: contain;
+  }
+  footer {
+    background-image: url(../../images/logo-me@2x.png);
+    background-size: contain;
+    transform: scale(2);
+  }
 }

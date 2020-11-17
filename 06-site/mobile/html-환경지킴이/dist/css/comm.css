@@ -214,6 +214,10 @@ header .nav-depth1 li i {
   font-size: 12px;
 }
 
+.nav-foot li.on a {
+  color: #3399FB;
+}
+
 .nav-foot li:first-child span {
   display: block;
   margin: 0 auto 5px;
