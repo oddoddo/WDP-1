@@ -62,7 +62,7 @@ header h1 {
 }
 
 header .nav-open {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 20%;
   width: 80%;
@@ -98,7 +98,9 @@ header .nav-depth1 li i {
 }
 
 #nav-ham {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   overflow: hidden;
   clip: rect(0 0 0 0);
   margin: -1px;
@@ -107,11 +109,17 @@ header .nav-depth1 li i {
 }
 
 #nav-ham ~ .nav-open {
-  display: none;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
 }
 
 #nav-ham:checked ~ .nav-open {
-  display: block;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 #nav-ham:checked ~ .nav-bg {
@@ -141,9 +149,9 @@ header .nav-depth1 li i {
           transform: rotate(-45deg);
 }
 
-nav label {
-  position: absolute;
-  top: 20px;
+.nav-gnb label {
+  position: fixed;
+  top: 30px;
   right: 20px;
   z-index: 1100;
   display: block;
@@ -153,7 +161,7 @@ nav label {
   border-radius: 5px;
 }
 
-nav label::before {
+.nav-gnb label::before {
   position: absolute;
   top: -8px;
   left: 0;
@@ -167,7 +175,7 @@ nav label::before {
   transition: all .2s;
 }
 
-nav label::after {
+.nav-gnb label::after {
   position: absolute;
   top: 8px;
   left: 0;
@@ -179,6 +187,79 @@ nav label::after {
   border-radius: 5px;
   -webkit-transition: all .2s;
   transition: all .2s;
+}
+
+.nav-foot {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  background: #fff;
+}
+
+.nav-foot ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10px;
+}
+
+.nav-foot ul a {
+  display: block;
+  padding: 9px 20px;
+  font-size: 12px;
+}
+
+.nav-foot li:first-child span {
+  display: block;
+  margin: 0 auto 5px;
+  width: 22px;
+  height: 21px;
+  background-position: 0 0;
+}
+
+.nav-foot li:first-child.on span {
+  background-position: 0 -28px;
+}
+
+.nav-foot li:nth-child(2) span {
+  display: block;
+  margin: 0 auto 5px;
+  width: 21px;
+  height: 21px;
+  background-position: -24px 0;
+}
+
+.nav-foot li:nth-child(2).on span {
+  background-position: -24px -28px;
+}
+
+.nav-foot li:nth-child(3) span {
+  display: block;
+  margin: 0 auto 3px;
+  width: 20px;
+  height: 23px;
+  background-position: -48px 0;
+}
+
+.nav-foot li:nth-child(3).on span {
+  background-position: -48px -28px;
+}
+
+.nav-foot li:last-child span {
+  display: block;
+  margin: 0 auto 5px;
+  width: 21px;
+  height: 21px;
+  background-position: -68px 0;
+}
+
+.nav-foot li:last-child.on span {
+  background-position: -68px -28px;
 }
 
 /* 2배 이미지 분기대응 */
