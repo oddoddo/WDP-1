@@ -331,15 +331,15 @@ article:nth-child(12) {
   }
   article {
     width: 25%;
-    height: 250px;
+    height: 200px;
   }
   article:first-child {
     width: 75%;
-    height: 500px;
+    height: 400px;
   }
   article:nth-child(2) {
     width: 25%;
-    height: 250px;
+    height: 200px;
   }
   article:nth-child(6) {
     width: 50%;
