@@ -320,6 +320,9 @@ article:nth-child(12) {
   article:first-child {
     height: 500px;
   }
+  header .sns {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -430,11 +433,8 @@ article:nth-child(12) {
 
 @media screen and (max-width: 680px) {
   header {
+    display: block;
     padding: 10px 0 10px 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   header h1 {
     border-bottom: 1px solid #eee;
@@ -453,6 +453,58 @@ article:nth-child(12) {
   }
   article:nth-child(2) {
     height: 200px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: auto;
+    z-index: 10;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 80%;
+    background: transparent;
+  }
+  header h1 {
+    border-bottom: none;
+  }
+  header h1 a {
+    width: 150px;
+    height: 106px;
+    background: url(../../images/logo1.png) 0 0 no-repeat;
+    background-size: contain;
+  }
+  header #gnb {
+    width: 90%;
+    margin: 30px auto 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header #gnb li {
+    width: 100%;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+  header #gnb li a {
+    display: block;
+    padding: 20px 0 20px 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    color: #fff;
+  }
+  article:first-child {
+    height: 100vh;
+  }
+  article:first-child h2 {
+    display: none;
+  }
+  article:nth-child(n+2) {
+    display: none;
   }
 }
 /*# sourceMappingURL=comm.css.map */

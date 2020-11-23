@@ -15,14 +15,14 @@
     <title>Hello, world!</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-    <div class="wrap">
+    <div id="home" class="wrap">
         <header>
-            <nav class="navbar navbar-expand-md bg-dark navbar-dark justify-content-between fixed-top">
+            <nav class="navbar navbar-expand-md navbar-dark justify-content-between fixed-top">
                 <!-- Brand -->
                 <h1>
-                    <a class="navbar-brand" href="#">logo</a>
+                    <a class="navbar-brand" href="#home">logo</a>
                 </h1>
 
                 <!-- Toggler/collapsibe Button -->
@@ -34,13 +34,13 @@
                 <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#band">BAND</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#tour">TOUR</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#contact">CONTACT</a>
                         </li>
                     </ul>
                 </div>
@@ -67,11 +67,11 @@
         </div>
         <main>
             <!-- band -->
-            <section class="container sec-band text-center">
-                <h2 class="tit">THE BAND</h2>
-                <p class="tit-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <section id="band" class="container sec-band text-center">
+                <h2 class="tit slideani">THE BAND</h2>
+                <p class="tit-sub slideani">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
 
-                <div class="row">
+                <div class="row slideani">
                     <div class="col-lg-3 col-sm-6 col-12">
                         <img src="https://image.freepik.com/free-photo/fuji-mountain-with-milky-way-night_335224-104.jpg"
                             alt="">
@@ -92,11 +92,11 @@
             </section>
 
             <!-- tour -->
-            <section class="container-fluid text-center bg-dark">
+            <section id="tour" class="container-fluid text-center bg-dark">
                 <div class="container">
-                    <h2 class="tit">TOUR DATES</h2>
-                    <p class="tit-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                    <div class="cont">
+                    <h2 class="tit slideani">TOUR DATES</h2>
+                    <p class="tit-sub slideani">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    <div class="cont slideani">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
@@ -128,79 +128,55 @@
                     </div>
                 </div>
             </section>
-            <section class="container">
-                <h2 class="tit">TABLE</h2>
+            <section id="contact" class="container">
+                <h2 class="tit">CONTACT</h2>
                 <p class="tit-sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                 <div class="cont">
-                    <table class="table table-dark table-striped">
-                        <thead>
-                          <tr>
-                            <th>Firstname</th>
-                            <th>Lastname</th>
-                            <th>Email</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                          </tr>
-                          <tr>
-                            <td>Mary</td>
-                            <td>Moe</td>
-                            <td>mary@example.com</td>
-                          </tr>
-                          <tr>
-                            <td>July</td>
-                            <td>Dooley</td>
-                            <td>july@example.com</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    <form action="https://script.google.com/macros/s/AKfycbxeA6yAMdcJ7jqo5wXh6oj1B4TFrahty-K4K5a4/exec" method="post" class="form-contact">
+                        <fieldset>
+                            <legend class="blind">Contact</legend>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="name">이름</label>
+                                    <input type="text" name="name" id="name"  class="form-control" value="홍길동" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email">이메일</label>
+                                    <input type="email" name="email" id="email"  class="form-control" value="sample@mail.com" required>
+                                </div>
+                                <div class="col-md-12 mt-4">
+                                    <label for="comment">문의내용</label>
+                                    <textarea name="comment" id="comment"  class="form-control" required>dd</textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-info btn-sm">문의하기</button>
+                            </div>
+                            <div class="thankyou_message">
+                                <div class="box">
+                                    문의 주셔서 감사합니다.
+                                    <button>닫기</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
             </section>
         </main>
         <footer class="container-fluid bg-dark">
             <div class="container">
-                <a href="#">페이지 위로 이동</a>
+                <a href="#home">페이지 위로 이동</a>
             </div>
         </footer>
-        <script>
-            var swiper = new Swiper('.swiper-container', {
-                pagination: {
-                    el: '.swiper-pagination',
-                    type: 'progressbar',
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            });
-        </script>
     </div>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'progressbar',
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
+    <script src="./dist/js/comm.js"></script>
 </body>
 
 </html>
