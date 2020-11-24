@@ -52,11 +52,11 @@ $(function(){
 
     // modal창 닫기
     // .thankyou_message button 을 클릭했을 때
-    $('.thankyou_message a').click(function(){
+    $('.thankyou_message a').click(function(event){
+        // 링크의 기본 속성 없애기
+        event.preventDefault()
         $('.thankyou_message').hide()
     })
-
-
 
 
     // swiper
