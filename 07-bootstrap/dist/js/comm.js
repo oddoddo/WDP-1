@@ -30,8 +30,8 @@ $(function(){
     // 윈도우를 스크롤 했을 때
     $(window).scroll(function(){
 
-        console.log('윈도우 스크롤 값 : ' + $(window).scrollTop())
-        console.log('오브젝트의 위치값 : ' + $('.slideani').offset().top)
+        // console.log('윈도우 스크롤 값 : ' + $(window).scrollTop())
+        // console.log('오브젝트의 위치값 : ' + $('.slideani').offset().top)
         
         $('.slideani').each(function(){
 
@@ -48,6 +48,12 @@ $(function(){
 
         })
 
+    })
+
+    // modal창 닫기
+    // .thankyou_message button 을 클릭했을 때
+    $('.thankyou_message a').click(function(){
+        $('.thankyou_message').hide()
     })
 
 

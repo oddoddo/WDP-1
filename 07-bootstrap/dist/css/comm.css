@@ -113,13 +113,28 @@ footer .container {
 
 /* modal */
 .thankyou_message {
-    display: flex;justify-content: center;align-items: center;
-    position: fixed;top: 0;left: 0;right: 0;bottom: 0;
+    display: none;
+    justify-content: center;align-items: center;
+    position: fixed;top: 0;left: 0;right: 0;bottom: 0; z-index: 10;
     background: rgba(0,0,0, .7);
 }
 .thankyou_message .box {
+    position: relative;
     width: 300px;
     height: 300px;
+    padding: 130px 20px 20px;
     border-radius: 20px;
+    text-align: center; font-size: 20px;
     background: #fff;
+}
+.thankyou_message a {
+    display: block;
+    position: absolute;top: -15px;right: -15px;
+    background: rgba(0,0,0, .9);
+    color: #fff;
+    width: 50px;height: 50px;
+    border-radius: 50%;
+    font-size: 34px;
+    border: none;
+    cursor: pointer;
 }
