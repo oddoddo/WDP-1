@@ -7,12 +7,18 @@ body {background: url(../../pc.jpg) 50% 0 no-repeat;background-size: 1308px auto
 /* layout */
 .container {
     position: relative;
-  max-width: 980px;
+    max-width: 820px;
+    padding: 73px 0;
 }
 
 /* header */
 .navbar {
   padding: 1rem;
+  transition: all .5s;
+  &.sticky {
+    padding: 0.5rem 1rem;
+    background: rgba(0,0,0, .9);
+  }
 }
 
 .navbar-brand {
@@ -36,11 +42,21 @@ body {background: url(../../pc.jpg) 50% 0 no-repeat;background-size: 1308px auto
 /* sec-intro */
 
 .sec-intro {
+    height: 642px; padding-top: 71px;
+    background: linear-gradient(115deg, #0dccbc, #315db6);
+    .container {
+        max-width: 950px;
+        padding: 0;
+    }
     .col-right {
         position: absolute;top: 0;right: -59px;
         width: 535px; height: 740px;
         background: url(../../images/header-slide.png) 0 0 no-repeat;
         background-size: contain;
+        img {
+            position: absolute;top: 86px; left: 23px;
+            width: 287px;
+        }
     }
 
     .col-left {
@@ -62,6 +78,7 @@ body {background: url(../../pc.jpg) 50% 0 no-repeat;background-size: 1308px auto
             color: #fff;
         }
         .btn-area {
+            // overflow: hidden;
             margin-top: 36px;
             a {
                 float: left;
@@ -82,4 +99,15 @@ body {background: url(../../pc.jpg) 50% 0 no-repeat;background-size: 1308px auto
             }
         }
       }
+}
+
+.sec-how {
+    background: #323a47;
+    h2 {
+        font-size: 1.625em;
+        color: #fff;
+    }
+    *{
+        color: #fff;
+    }
 }

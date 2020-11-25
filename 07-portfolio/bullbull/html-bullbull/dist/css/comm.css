@@ -11,12 +11,20 @@ body {
 /* layout */
 .container {
   position: relative;
-  max-width: 980px;
+  max-width: 820px;
+  padding: 73px 0;
 }
 
 /* header */
 .navbar {
   padding: 1rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.navbar.sticky {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .navbar-brand {
@@ -38,6 +46,17 @@ body {
 }
 
 /* sec-intro */
+.sec-intro {
+  height: 642px;
+  padding-top: 71px;
+  background: linear-gradient(115deg, #0dccbc, #315db6);
+}
+
+.sec-intro .container {
+  max-width: 950px;
+  padding: 0;
+}
+
 .sec-intro .col-right {
   position: absolute;
   top: 0;
@@ -46,6 +65,13 @@ body {
   height: 740px;
   background: url(../../images/header-slide.png) 0 0 no-repeat;
   background-size: contain;
+}
+
+.sec-intro .col-right img {
+  position: absolute;
+  top: 86px;
+  left: 23px;
+  width: 287px;
 }
 
 .sec-intro .col-left {
@@ -99,5 +125,18 @@ body {
 
 .sec-intro .col-left .btn-area a.btn-apple {
   background-image: url(../../images/header-apple.gif);
+}
+
+.sec-how {
+  background: #323a47;
+}
+
+.sec-how h2 {
+  font-size: 1.625em;
+  color: #fff;
+}
+
+.sec-how * {
+  color: #fff;
 }
 /*# sourceMappingURL=comm.css.map */
