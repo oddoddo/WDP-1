@@ -11,6 +11,20 @@
     padding: 76px 0 120px;
 }
 
+// comm
+.txt-bar {
+    position: relative;
+    margin-top: 82px;
+    color: #fff;
+    &::before {
+        content: '';
+        position: absolute;top: -26px;left: 0;
+        display: block;
+        width: 35px;height: 3px;
+        background: #fff;
+    }
+}
+
 /* header */
 .navbar {
   padding: 1rem;
@@ -107,18 +121,7 @@
         font-size: 1.625em;
         color: #fff;
     }
-    p {
-        position: relative;
-        margin-top: 82px;
-        color: #fff;
-        &::before {
-            content: '';
-            position: absolute;top: -26px;left: 0;
-            display: block;
-            width: 35px;height: 3px;
-            background: #fff;
-        }
-    }
+    
     ul {
         display: flex; justify-content: space-between;
         margin: 67px -27px 0 -27px;
@@ -151,5 +154,53 @@
     .player {
         position: absolute;
         width: 100%;height: 100%;
+    }
+}
+
+.sec-prizes {
+    .container {
+        display: flex; justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .col-img {
+        position: relative;
+        width: 37%; margin-top: 70px;
+        img {
+            width: 100%;
+        }
+    }
+    .col-txt {
+        display: flex;flex-direction: column;
+        width: 52%; margin-top: 68px;
+        h2 {
+            font-weight: 900; font-size: 1.75em;
+            letter-spacing: -.8px;
+        }
+        ul {
+            display: flex; flex-wrap: wrap; 
+            align-content: space-between;
+            flex-grow: 1;
+            margin-top: 35px;
+            background: red;
+            li {
+                padding: 15px 30px;
+                background: rgba(0,0,0,.5);
+                &:hover {
+                    cursor: pointer;
+                    background: rgba(0,0,0,.9);
+                }
+            }
+            strong {
+                font-size: 1.05rem;
+            }
+            p {
+                margin-top: 3px;
+                font-size: 0.85rem;
+            }
+        }
+        
+        * {
+            color: red;
+        }
     }
 }

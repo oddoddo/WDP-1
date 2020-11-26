@@ -6,6 +6,23 @@
   padding: 76px 0 120px;
 }
 
+.txt-bar {
+  position: relative;
+  margin-top: 82px;
+  color: #fff;
+}
+
+.txt-bar::before {
+  content: '';
+  position: absolute;
+  top: -26px;
+  left: 0;
+  display: block;
+  width: 35px;
+  height: 3px;
+  background: #fff;
+}
+
 /* header */
 .navbar {
   padding: 1rem;
@@ -127,23 +144,6 @@
   color: #fff;
 }
 
-.sec-how p {
-  position: relative;
-  margin-top: 82px;
-  color: #fff;
-}
-
-.sec-how p::before {
-  content: '';
-  position: absolute;
-  top: -26px;
-  left: 0;
-  display: block;
-  width: 35px;
-  height: 3px;
-  background: #fff;
-}
-
 .sec-how ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -198,5 +198,84 @@
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+.sec-prizes .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.sec-prizes .col-img {
+  position: relative;
+  width: 37%;
+  margin-top: 70px;
+}
+
+.sec-prizes .col-img img {
+  width: 100%;
+}
+
+.sec-prizes .col-txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 52%;
+  margin-top: 68px;
+}
+
+.sec-prizes .col-txt h2 {
+  font-weight: 900;
+  font-size: 1.75em;
+  letter-spacing: -.8px;
+}
+
+.sec-prizes .col-txt ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-top: 35px;
+  background: red;
+}
+
+.sec-prizes .col-txt ul li {
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.sec-prizes .col-txt ul li:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.sec-prizes .col-txt ul strong {
+  font-size: 1.05rem;
+}
+
+.sec-prizes .col-txt ul p {
+  margin-top: 3px;
+  font-size: 0.85rem;
+}
+
+.sec-prizes .col-txt * {
+  color: red;
 }
 /*# sourceMappingURL=comm.css.map */
