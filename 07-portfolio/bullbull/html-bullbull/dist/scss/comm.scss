@@ -2,7 +2,6 @@
 
 @import url(./reset.css);
 
-// body {background: url(../../pc.jpg) 50% 0 no-repeat;background-size: 1308px auto;} .wrap {opacity: .6;}
 
 /* layout */
 .container {
@@ -158,18 +157,47 @@
 }
 
 .sec-prizes {
+    position: relative;
+    background-image: linear-gradient(135deg, #24C6BC, #325DB6), url(../../images/bg-coin2.png) ;
+    &::before {
+        content: '';
+        position: absolute;top: -10px;right: 0;
+        display: block;
+        width: 320px; height: 540px;
+        background: url(../../images/bg-coin2.png) 0 0 no-repeat;
+        background-size: contain;
+        opacity: .5;
+    }
+    // &::after {
+    //     content: '';
+    //     position: absolute;bottom: -10px;right: 0; z-index: 80;
+    //     display: block;
+    //     width: 320px; height: 540px;
+    //     background: url(../../images/bg-coin3.png) 0 0 no-repeat;
+    //     background-size: contain;
+    // }
     .container {
         display: flex; justify-content: space-between;
         flex-direction: row-reverse;
     }
     .col-img {
-        position: relative;
+        position: relative; 
         width: 37%; margin-top: 70px;
+        &::before {
+            position: absolute;top: 158px;left: -185px; z-index: 90;
+            display: block;
+            width: 380px; height: 360px;
+            content: '';
+            background: url(../../images/bg-coin1.png) 0 0 no-repeat;
+            background-size: contain;
+        }
         img {
+            position: relative;z-index: 100;
             width: 100%;
         }
     }
     .col-txt {
+        position: relative; z-index: 100;
         display: flex;flex-direction: column;
         width: 52%; margin-top: 68px;
         h2 {
@@ -181,15 +209,15 @@
             align-content: space-between;
             flex-grow: 1;
             margin-top: 35px;
-            background: red;
+            // background: red;
+            }
             li {
                 padding: 15px 30px;
                 background: rgba(0,0,0,.5);
-                &:hover {
+                &:hover, &.on {
                     cursor: pointer;
                     background: rgba(0,0,0,.9);
                 }
-            }
             strong {
                 font-size: 1.05rem;
             }
@@ -200,7 +228,9 @@
         }
         
         * {
-            color: red;
+            color: #fff;
         }
     }
 }
+
+// body {background: url(../../pc.jpg) 50% 0 no-repeat;background-size: 1308px auto;} .wrap {opacity: .6;}

@@ -14,7 +14,6 @@ $(function(){
     // (header의 초기 디자인을 조정하기 위해)
     $(window).trigger('scroll');
   })
-  
 
 
 })
