@@ -168,17 +168,23 @@
         background-size: contain;
         opacity: .5;
     }
-    // &::after {
-    //     content: '';
-    //     position: absolute;bottom: -10px;right: 0; z-index: 80;
-    //     display: block;
-    //     width: 320px; height: 540px;
-    //     background: url(../../images/bg-coin3.png) 0 0 no-repeat;
-    //     background-size: contain;
-    // }
+    &::after {
+        content: '';
+        // position 가운데 정렬
+        position: absolute;bottom: -230px;left: 50%; z-index: 80;
+        // margin-left: -285px;
+        // transform: translate(-50% , -50%);
+        transform: translateX(-50%);
+        display: block;
+        width: 570px; height: 540px;
+        background: url(../../images/bg-coin3.png) 0 0 no-repeat;
+        background-size: contain;
+        opacity: .3;
+    }
     .container {
         display: flex; justify-content: space-between;
         flex-direction: row-reverse;
+        padding-bottom: 155px;
     }
     .col-img {
         position: relative; 

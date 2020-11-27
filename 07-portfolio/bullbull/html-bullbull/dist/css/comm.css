@@ -218,6 +218,22 @@
   opacity: .5;
 }
 
+.sec-prizes::after {
+  content: '';
+  position: absolute;
+  bottom: -230px;
+  left: 50%;
+  z-index: 80;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+  width: 570px;
+  height: 540px;
+  background: url(../../images/bg-coin3.png) 0 0 no-repeat;
+  background-size: contain;
+  opacity: .3;
+}
+
 .sec-prizes .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -229,6 +245,7 @@
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+  padding-bottom: 155px;
 }
 
 .sec-prizes .col-img {
