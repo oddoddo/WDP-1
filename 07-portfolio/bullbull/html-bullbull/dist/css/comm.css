@@ -23,6 +23,18 @@
   background: #fff;
 }
 
+.txt-bar.txt-left {
+  width: 100%;
+  text-align: center;
+  color: #708199;
+}
+
+.txt-bar.txt-left::before {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 /* header */
 .navbar {
   padding: 1rem;
@@ -327,6 +339,59 @@
 }
 
 .sec-prizes .col-txt * {
+  color: #fff;
+}
+
+.sec-referral {
+  position: relative;
+  z-index: 200;
+  background: #323a47;
+}
+
+.sec-referral h2 {
+  text-align: center;
+}
+
+.sec-referral ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 50px;
+}
+
+.sec-referral ul li {
+  width: 46%;
+  padding: 45px 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.sec-referral ul li:first-child p {
+  background: url(../../images/img-cash1.png) 0 50% no-repeat;
+  background-size: auto 90%;
+}
+
+.sec-referral ul li:nth-child(2) p {
+  background: url(../../images/img-cash2.png) 0 50% no-repeat;
+  background-size: auto 90%;
+}
+
+.sec-referral ul li p {
+  height: 100%;
+  padding: 14px 0 0 110px;
+  font-size: 0.812em;
+}
+
+.sec-referral ul li em {
+  display: block;
+  font-size: 1.875em;
+  font-weight: 700;
+}
+
+.sec-referral * {
   color: #fff;
 }
 /*# sourceMappingURL=comm.css.map */
