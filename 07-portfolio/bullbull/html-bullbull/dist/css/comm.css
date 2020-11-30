@@ -23,13 +23,13 @@
   background: #fff;
 }
 
-.txt-bar.txt-left {
+.txt-bar.txt-center {
   width: 100%;
   text-align: center;
   color: #708199;
 }
 
-.txt-bar.txt-left::before {
+.txt-bar.txt-center::before {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -365,7 +365,7 @@
 .sec-referral ul li {
   width: 46%;
   padding: 45px 50px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 5px;
 }
 
@@ -393,5 +393,49 @@
 
 .sec-referral * {
   color: #fff;
+}
+
+.sec-count {
+  background: url(../../images/bg-count.png) 0 0 no-repeat;
+  background-size: cover;
+}
+
+.sec-count ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sec-count li {
+  padding-top: 90px;
+  text-align: center;
+  color: #fff;
+}
+
+.sec-count li:first-child {
+  background: url(../../images/img-count1.png) 50% 0 no-repeat;
+}
+
+.sec-count li:nth-child(2) {
+  background: url(../../images/img-count2.png) 50% 0 no-repeat;
+}
+
+.sec-count li:last-child {
+  background: url(../../images/img-count3.png) 50% 0 no-repeat;
+}
+
+.sec-count li em {
+  display: block;
+  margin: 0 auto;
+}
+
+.counter {
+  display: block;
+  width: 120px;
+  background: transparent;
+  font-size: 2rem;
 }
 /*# sourceMappingURL=comm.css.map */

@@ -1,0 +1,368 @@
+@charset "UTF-8";
+
+/* layout */
+* {
+  font-size: 16px;
+  color: #101010;
+  line-height: 1.7;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+
+}
+#fp-nav ul li, .fp-slidesNav ul li{
+  width: 20px;
+  height: 20px;
+  margin: 15px 30px 15px 15px;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: 3px solid #fff;
+  margin: -5px 0 0 -5px;
+  
+}
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span{
+  background: transparent;
+  border: 3px solid #fff;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  
+}
+
+
+
+
+
+.container {
+  max-width: 1400px;
+}
+
+.section h2 {
+  font-size: 0;
+  line-height: 0;
+  height: 120px;
+}
+
+.section h2 img {
+  height: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+
+/* main_section */
+.main {
+  background: url('../../images/main_bg.jpg') 50% no-repeat;
+  background-size: cover;
+}
+
+.main_txt {
+  width: 45%;
+}
+
+.main_txt h1.logo a {
+  font-size: 0;
+  line-height: 0;
+}
+
+.main_txt h1.logo a img {
+  width: 100%;
+}
+
+.main_txt p.title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 2.5em;
+  margin-top: 60px;
+}
+
+.main_txt p.txt {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 200;
+  font-size: 1em;
+
+}
+
+.quick_btn a {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50px;
+  background: #182952;
+  margin-top: 60px;
+  color: #fff;
+  box-shadow: 3px 3px 5px rgba(24, 41, 82, 0.3);
+}
+
+.quick_btn a:hover {
+  text-decoration: none;
+  background: #e14594;
+}
+
+.quick_btn .down_btn {
+  margin-right: 15px;
+}
+
+.main_phone {
+  width: 45%;
+  text-align: right;
+}
+
+.main_phone img {
+  width: 100%;
+
+}
+
+/* sec_technology */
+
+.tec_list {
+  margin-top: 80px;
+}
+
+.tec_list li {
+  width: 33.33%;
+  margin: 0 1.25em;
+  padding: 3.75em 2.5em;
+  background: #fff;
+  border-radius: 10px;
+  border: 2px solid #182952;
+  box-shadow: 3px 3px 5px rgba(24, 41, 82, 0.3);
+  transition: all .3s;
+
+}
+
+.tec_list li .tec_icon {
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+  margin: 0 auto 30px;
+}
+/* .tec_list li .tec_icon i{
+  font-size: 85px;
+  line-height: 220px;
+  color:#182952;
+} */
+
+.tec_list li:nth-child(1) .tec_icon{
+  background:#eee url('../../images/tec_icon01_b.png')50% no-repeat;
+}
+.tec_list li:nth-child(2) .tec_icon{
+  background:#eee url('../../images/tec_icon02_b.png')50% no-repeat;
+}
+.tec_list li:nth-child(3) .tec_icon{
+  background:#eee url('../../images/tec_icon03_b.png')50% no-repeat;
+}
+
+
+
+.tec_list li p.tit {
+  font-size: 2.5em;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.tec_list li p.txt {
+  word-break: keep-all;
+  color: #606060;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.tec_list li:hover {
+  border: 2px solid #e14594;
+  transform: translateY(-20px);
+}
+
+.tec_list li:hover p.tit {
+  color: #e14594;
+}
+
+
+/* sec_video */
+.sec_video {
+  background: url('../../images/video_bg.jpg')50% no-repeat;
+  background-size: cover;
+}
+
+.sec_video iframe {
+  width: 1280px;
+  height: 720px;
+}
+
+/* sec_howto */
+
+.sec_howto {
+  background: url('../../images/howto_bg.jpg')50% no-repeat;
+  background-size: cover;
+}
+
+.sec_howto .howto_area {
+  width: 62%;
+}
+
+.sec_howto .howto_area li {
+  padding: 1.875em;
+  background: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 2px solid #182952;
+  box-shadow: 3px 3px 5px rgba(24, 41, 82, 0.3);
+  transition: transform .5s;
+  cursor: pointer;
+}
+
+.sec_howto .howto_area li:last-child {
+  margin-bottom: 0px;
+}
+
+.sec_howto .howto_area li p.tit {
+  font-size: 1.875em;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.sec_howto .howto_area li p.txt {
+  word-break: keep-all;
+  color: #606060;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+.sec_howto .howto_area li:hover {
+  transform: translateX(30px);
+  border: 2px solid #e14594;
+}
+
+.sec_howto .howto_area li:hover p.tit {
+  color: #e14594;
+}
+
+.howto_img {
+  position: relative;
+  overflow: hidden;
+}
+
+.howto_frImg{
+  position: absolute;
+  top:89px;
+  left:22px;
+  overflow: hidden;
+}
+
+/* .howto_img  .howto_imgList{
+  position: absolute;
+  top:0;
+  left:0;
+} */
+
+.howto_imgList li {
+  position: absolute;
+  top: 0;
+  /* left:22px; */
+  right: -360px;
+  opacity: 0;
+  transition: all 1s;
+}
+
+/*sec_footer*/
+.sec_footer .fixed-bg {
+  height: 100%;
+  background: url('../../images/info_bg.jpg') 50% 200% no-repeat;
+  background-size: cover;
+}
+
+.sec_footer .footer_bg {
+  position: absolute;
+  bottom:0;
+  left:0;
+  width: 100%;
+  background: #101010;
+  padding: 100px 0 30px;
+}
+
+.footer_bg .download {
+  margin-bottom: 100px;
+}
+
+.footer_bg .download a {
+  display: inline-block;
+  width: 210px;
+  height: 60px;
+  font-size: 0;
+  line-height: 0;
+}
+
+.footer_bg .download a.iosApp_down {
+  background: url('../../images/apple_app.png')0 no-repeat;
+  background-size: contain;
+}
+
+.footer_bg .download a.androidApp_down {
+  background: url('../../images/google_app.png')0 no-repeat;
+  background-size: contain;
+}
+
+address {
+  font-size: 0.875em;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* .footer_bg .download a {
+  display: inline-block;
+  width: 260px;
+  height: 60px;
+  line-height: 57px;
+  color:#101010;
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid #182952;
+  border-radius: 60px;
+  font-weight: 500;
+  font-size: 1.125em;
+}
+
+.footer_bg .download a.iosApp_down {
+  margin-right: 30px;
+}
+
+.footer_bg .download a.iosApp_down:before {
+  content:"\f36f";
+  display:inline-block;
+  font-size: 1.25em;
+  font-family: 'Line Awesome Brands';
+  font-weight: 600;
+  vertical-align: top;
+  margin-right: 5px;
+}
+
+.footer_bg .download a.androidApp_down:before {
+  content:"\f2b3";
+  display:inline-block;
+  font-size: 1.25em;
+  font-family: 'Line Awesome Brands';
+  font-weight: 600;
+  vertical-align: top;
+  margin-right: 5px;
+} */
+
+/* odada 201127 */
+.fp-viewing-anchor2 #fp-nav ul li a.active span, .fp-viewing-anchor2 #fp-nav ul li:hover a.active span, .fp-viewing-anchor2 .fp-slidesNav ul li a.active span, .fp-viewing-anchor2 .fp-slidesNav ul li:hover a.active span {
+  border: 3px solid #000;
+}
+
+.fp-viewing-anchor2 #fp-nav ul li a span, .fp-slidesNav ul li a span {
+  border: 3px solid #000;
+}

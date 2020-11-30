@@ -22,7 +22,7 @@
         width: 35px;height: 3px;
         background: #fff;
     }
-    &.txt-left {
+    &.txt-center {
         width: 100%;
         text-align: center;
         color: #708199;
@@ -259,7 +259,7 @@
         li {
             width: 46%;
             padding: 45px 50px;
-            background: rgba(255,255,255,.1);
+            background: rgba(255,255,255,.05);
             border-radius: 5px;
             &:first-child p {
                 background: url(../../images/img-cash1.png) 0 50% no-repeat;
@@ -280,9 +280,39 @@
         }
     }
 
-    *{color: #fff;}
+    * {color: #fff;}
+}
 
-    
+.sec-count {
+    background: url(../../images/bg-count.png) 0 0 no-repeat;
+    background-size: cover;
+
+    ul {
+        display: flex; justify-content: space-between;
+    }
+    li {
+        padding-top: 90px; 
+        text-align: center; color: #fff;
+        &:first-child {
+            background: url(../../images/img-count1.png) 50% 0 no-repeat;
+        }
+        &:nth-child(2) {
+            background: url(../../images/img-count2.png) 50% 0 no-repeat;
+        }
+        &:last-child {
+            background: url(../../images/img-count3.png) 50% 0 no-repeat;
+        }
+        em {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+.counter {
+    display: block;
+    width: 120px;
+    background: transparent;
+    font-size: 2rem;
 }
 
 // body {background: url(../../pc.jpg) 50% 13px no-repeat;background-size: 1308px auto;} .wrap {opacity: .6;}

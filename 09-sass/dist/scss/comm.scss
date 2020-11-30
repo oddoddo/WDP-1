@@ -1,0 +1,18 @@
+@charset "UTF-8";
+@import 'mixin'
+
+.wrap {
+    width: 1200px;margin: auto;
+    header {
+        height: 200px;
+        background: #eee;
+    }
+    main {
+        height: 500px;
+        background: tomato;
+    }
+    footer {
+        height: 100px;
+        background: #000;
+    }
+}

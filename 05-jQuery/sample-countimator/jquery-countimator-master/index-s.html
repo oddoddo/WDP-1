@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="./dist/js/jquery.countimator.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
+    <script>
+        $(function() {
+            $(".counter").countimator();
+        });
+    </script>
+</head>
+<body>
+
+    You got to count it <kbd class="counter counter-default">500</kbd> times
+
+    <hr>
+
+    You got to count it <kbd class="counter counter-default">30</kbd> times
+
+    <hr>
+
+    <kbd class="counter counter-default"
+  data-thousand-delimiter="," 
+  data-value="1000000" 
+  data-template="$ {{count}} +">0 EUR
+</kbd>
+    
+</body>
+</html>

@@ -51,8 +51,9 @@ $(function(){
       $('.col-img img').attr('src', './images/img-jackpots' + index + '.gif')
 
     })
+  })
 
-
-})
+  // count
+  $(".counter").countimator();
 
 })
