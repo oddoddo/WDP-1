@@ -35,6 +35,37 @@
           transform: translateX(-50%);
 }
 
+.btn-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 450px;
+  padding-top: 36px;
+}
+
+.btn-area a {
+  width: 209px;
+  height: 63px;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  text-indent: -9999px;
+  background-size: 80% auto;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.btn-area a.btn-google {
+  background-image: url(../../images/header-google.gif);
+}
+
+.btn-area a.btn-apple {
+  background-image: url(../../images/header-apple.gif);
+}
+
 /* header */
 .navbar {
   padding: 1rem;
@@ -119,32 +150,6 @@
 .sec-intro .col-left p {
   width: 420px;
   color: #fff;
-}
-
-.sec-intro .col-left .btn-area {
-  margin-top: 36px;
-}
-
-.sec-intro .col-left .btn-area a {
-  float: left;
-  width: 209px;
-  height: 63px;
-  margin-right: 14px;
-  background-color: #000;
-  border: 1px solid #fff;
-  border-radius: 7px;
-  text-indent: -9999px;
-  background-size: 80% auto;
-  background-position: 50%;
-  background-repeat: no-repeat;
-}
-
-.sec-intro .col-left .btn-area a.btn-google {
-  background-image: url(../../images/header-google.gif);
-}
-
-.sec-intro .col-left .btn-area a.btn-apple {
-  background-image: url(../../images/header-apple.gif);
 }
 
 .sec-how {
@@ -432,10 +437,45 @@
   margin: 0 auto;
 }
 
+.sec-count ul {
+  margin: 0 -120px;
+}
+
+.sec-count li {
+  width: 33.333%;
+}
+
 .counter {
   display: block;
-  width: 120px;
+  width: 100%;
   background: transparent;
-  font-size: 2rem;
+  font-size: 1.8rem;
+}
+
+footer {
+  background: #323a47;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px 0 20px;
+}
+
+footer ul a {
+  display: block;
+  padding: 20px 30px;
+}
+
+footer .btn-area {
+  margin: 0 auto;
+}
+
+footer * {
+  color: #fff;
 }
 /*# sourceMappingURL=comm.css.map */

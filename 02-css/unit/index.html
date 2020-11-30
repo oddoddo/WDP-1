@@ -15,24 +15,38 @@
             font-size: 9vw;
             color: #fff;
         }
-        p {
-            font-size: 1.25em;
-        }
     </style>
 </head>
 <body>
+    <style>
+        .em {
+            margin: 100px 0 500px;
+        }
+        em {
+            font-size: 1.25em; /* 20px */
+        }
+        p {
+            font-size: 2em; /* 2배 */
+        }
+        p em {
+            /* rem 단위는 html, body 기준으로 */
+            font-size: 1.25rem; /* 20px */
+        }
+    </style>
+    <div class="em">
+        <em>안녕안연안</em>
+        
+        <p> <!--  p : 32px -->
+            랄라라라라라
+            <em>바닥 - 안녕안연안</em> <!-- em : 20px -->
+        </p>
+    </div>
 
     <div class="vw">
         안녕하세요. 오다다입니다.
-        
-        <em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis provident excepturi vel sequi fugiat facilis architecto, animi beatae, reiciendis cupiditate optio distinctio porro blanditiis vitae veniam dignissimos. Eveniet, laborum ab!</em>
-        <!--  p : 20px -->
-        <p>
-            랄라라라라라
-            <em>안녕안연안</em>
-        </p>
-
     </div>
+
+    
     
     
 </body>
