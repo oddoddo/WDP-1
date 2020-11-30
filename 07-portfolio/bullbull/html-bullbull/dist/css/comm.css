@@ -522,8 +522,8 @@ footer * {
   bottom: 30px;
   right: 30px;
   color: #fff;
-  width: 100px;
-  height: 100px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.5);
   text-indent: -9999px;
@@ -541,6 +541,32 @@ footer * {
   font-family: 'Line Awesome Free';
   font-weight: 900;
   text-indent: 0;
-  font-size: 40px;
+  font-size: 20px;
+}
+
+.slide .slick-slide {
+  padding: 0 10px;
+  opacity: .5;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.slide .slick-active {
+  opacity: 1;
+}
+
+.slide .slick-prev {
+  z-index: 100;
+  left: 230px;
+}
+
+.slide .slick-next {
+  right: 230px;
+}
+
+.slide .slick-prev, .slide .slick-next {
+  width: 100px;
+  height: 100px;
+  background: red;
 }
 /*# sourceMappingURL=comm.css.map */

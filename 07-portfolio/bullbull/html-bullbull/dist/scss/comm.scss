@@ -379,7 +379,7 @@ footer {
 #scrollUp {
     bottom: 30px;right: 30px;
     color: #fff;
-    width: 100px;height: 100px;
+    width: 30px;height: 30px;
     border-radius: 50%;
     background: rgba(0,0,0,.5);
     text-indent: -9999px; font-size: 0;
@@ -389,7 +389,30 @@ footer {
         display: block;
         font-family: 'Line Awesome Free';
         font-weight: 900;
-        text-indent: 0; font-size: 40px;
+        text-indent: 0; font-size: 20px;
+    }
+}
+
+// slide
+.slide {
+    .slick-slide {
+        padding: 0 10px;
+        opacity: .5;
+        transition: all .5s;
+    }
+    .slick-active {
+        opacity: 1;
+    }
+    .slick-prev {
+        z-index: 100;
+        left: 230px;
+    }
+    .slick-next {
+        right: 230px;
+    }
+    .slick-prev, .slick-next {
+        width: 100px; height: 100px;
+        background: red;
     }
 }
 
