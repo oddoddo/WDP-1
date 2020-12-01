@@ -10,3 +10,6 @@
 	position: absolute;top: 50%; left: 50%; 
 	transform: translate(-50%, -50%);
 }
+@mixin gradient {
+    background: linear-gradient(115deg, #0dccbc, #315db6);
+}

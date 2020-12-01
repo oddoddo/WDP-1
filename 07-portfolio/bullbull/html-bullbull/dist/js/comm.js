@@ -70,10 +70,13 @@ $(function(){
 
   // slick
   $('.slide').slick({
-    autoplay: true,
+    // autoplay: true,
     centerMode: true,
-  centerPadding: '300px',
-  slidesToShow: 1,
+    centerPadding: '300px',
+    slidesToShow: 1,
+    dots: true,
+    // infinite: true,
+    speed: 300,
   });
 
 })
