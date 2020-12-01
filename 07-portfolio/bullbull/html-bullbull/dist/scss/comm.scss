@@ -84,6 +84,11 @@
   padding-left: 1.5rem;
 }
 
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #000;
+    background: #fff;
+}
+
 /* sec-intro */
 
 .sec-intro {
@@ -487,5 +492,35 @@ footer {
         }
     }
 }
+
+.ani {
+    opacity: 0;
+}
+.ani-effect {
+    // opacity: 1;
+    animation-name: ani-effect;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.sec-how {
+    h2 {animation-delay: 1s;}
+    p {animation-delay: 2s;}
+    ul {animation-delay: 3s;}
+}
+@keyframes ani-effect {
+    0% {
+        opacity: 0;
+        filter: alpha(opacity=0); /* ie 호환성 */
+        transform: translateY(40px)
+    }
+    100% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        transform: translateY(0)
+    }
+}
+
+
+
 
 // body {background: url(../../pc.jpg) 50% 13px no-repeat;background-size: 1308px auto;} .wrap {opacity: .6;}

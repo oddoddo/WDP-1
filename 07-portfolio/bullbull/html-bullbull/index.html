@@ -25,19 +25,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./dist/css/comm.css">   <!-- my css -->
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 <div id="skipnavigation">
     <a href="#gnb"><span>주메뉴 바로가기</span></a>
     <a href="#main"><span>본문 바로가기</span></a>
     <a href="#login"><span>로그인 바로가기</span></a>
   </div>
 
-  <div class="wrap">
+  <div id="home" class="wrap">
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top"> <!-- .bg-dark 추가시 디자인 변경 -->
         <!-- Brand -->
         <h1>
-          <a class="navbar-brand" href="#">BULLBULL</a>
+          <a class="navbar-brand" href="#home">BULLBULL</a>
         </h1>
       
         <!-- Toggler/collapsibe Button -->
@@ -85,13 +85,13 @@
         </div>
       </section>
 
-      <section class="sec-how">
+      <section id="play" class="sec-how">
         <div class="container">
-          <h2>How To Play!</h2>
-          <p class="txt-bar">In every contest, Bullbull will post five this-or-that quizzes about stocks traded on global exchange. <br>
+          <h2 class="ani">How To Play!</h2>
+          <p class="ani txt-bar">In every contest, Bullbull will post five this-or-that quizzes about stocks traded on global exchange. <br>
             Pick three or more correct answers to win! </p>
 
-          <ul>
+          <ul class="ani">
             <li>Choose a Contest</li>
             <li>Make Your Pick</li>
             <li>Watch and Win</li>
@@ -99,11 +99,11 @@
         </div>
       </section>
 
-      <section class="sec-video">
+      <section id="video" class="sec-video">
         <div class="container">
           <h2 class="blind">bullbull 소개영상</h2>
 
-          <div class="slide"> 
+          <div class="slide ani"> 
             <div>
               <img src="./images/slide2.jpg" alt="">
               <div class="slide-card">
@@ -206,13 +206,13 @@
         </div>
       </section>
 
-      <section class="sec-prizes">
+      <section id="prizes" class="sec-prizes">
         <div class="container">
           <div class="col-txt">
-            <h2>Jackpots & Prizes</h2>
-            <p class="txt-bar">Win consecutively for Jackpots and Prizes.
+            <h2 class="ani">Jackpots & Prizes</h2>
+            <p class="txt-bar ani">Win consecutively for Jackpots and Prizes.
             Upto 31 contests available for each stock exchange!</p>
-              <ul class="lst-prize">
+              <ul class="lst-prize ani">
                 <li>
                   <strong>31 Streak Jackpot</strong>
                   <p>Win 31 contests consecutively to hit a million dollar jackpot!
@@ -230,7 +230,7 @@
                 </li>
               </ul>
           </div>
-          <div class="col-img">
+          <div class="col-img ani">
             <img src="./images/img-jackpots1.gif" alt="">
           </div>
 
@@ -238,13 +238,13 @@
         </div>
       </section>
 
-      <section class="sec-referral">
+      <section id="referral" class="sec-referral">
         <div class="container">
-          <h2>5% Jackpot Referral</h2>
-          <p class="txt-bar txt-center">Bullbull will reward you with 5% of jackpot prize whenever your referred wins Bullbull jackpots. <br>
+          <h2 class="ani">5% Jackpot Referral</h2>
+          <p class="txt-bar txt-center ani">Bullbull will reward you with 5% of jackpot prize whenever your referred wins Bullbull jackpots. <br>
             Make sure to share around your referral code. </p>
 
-            <ul>
+            <ul class="ani">
               <li>
                 <p>
                   Your friend gets 100% of the jackpot!
@@ -265,7 +265,7 @@
 
       <section class="sec-count">
         <div class="container">
-          <ul>
+          <ul class="ani">
             <li>
               <kbd class="counter counter-default"
                         data-thousand-delimiter="," 

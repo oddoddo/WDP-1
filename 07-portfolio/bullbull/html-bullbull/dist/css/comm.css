@@ -97,6 +97,11 @@
   padding-left: 1.5rem;
 }
 
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #000;
+  background: #fff;
+}
+
 /* sec-intro */
 .sec-intro {
   height: 642px;
@@ -660,5 +665,65 @@ footer * {
   opacity: 0.2;
   -webkit-transition: all .5s;
   transition: all .5s;
+}
+
+.ani {
+  opacity: 0;
+}
+
+.ani-effect {
+  -webkit-animation-name: ani-effect;
+          animation-name: ani-effect;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.sec-how h2 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.sec-how p {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.sec-how ul {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+@-webkit-keyframes ani-effect {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    /* ie 호환성 */
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes ani-effect {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    /* ie 호환성 */
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 /*# sourceMappingURL=comm.css.map */
