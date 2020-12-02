@@ -78,9 +78,11 @@ $(function(){
     // infinite: true,
     speed: 300,
   });
-
+  
   // 클릭시 해당 해쉬태그로 애니메이션 되면서 이동
   $('.navbar a').click(function(event){
+    
+    let offset = $('.navbar').height();
 
     //링크 기능 삭제
     event.preventDefault()
@@ -88,10 +90,11 @@ $(function(){
     // 만약 해쉬태그가 비워져 있지 않으면...
     if(this.hash !== ''){
       // 참일 경우
-      let hash = this.hash
+      let hash = this.hash,
+            pos = $(hash).offset().top
 
       $('html, body').animate({
-        scrollTop : $(hash).offset().top
+        scrollTop : pos
       }, 1000, function(){
         window.location.hash = hash;
       })
@@ -99,23 +102,22 @@ $(function(){
   })
 
   // 스크롤 시 오브젝트 애니메이션
-  $(window).scroll(function(){
+  // $(window).scroll(function(){
 
-    $('.ani').each(function(){
+  //   $('.ani').each(function(){
 
-      let pos = $(this).offset().top,
-            winTop = $(window).scrollTop() + 600
+  //     let pos = $(this).offset().top,
+  //           winTop = $(window).scrollTop() + 600
 
-      // 만약 pos의 값이 wintop값 보다 작아지면..
-      // 스크롤 내리다가... .ani 위치까지 내려가면...
-      if(pos < winTop){
-        $(this).addClass('ani-effect')
-      }
+  //     // 만약 pos의 값이 wintop값 보다 작아지면..
+  //     // 스크롤 내리다가... .ani 위치까지 내려가면...
+  //     if(pos < winTop){
+  //       $(this).addClass('ani-effect')
+  //     }
+  //   })
+  // })
 
-
-
-    })
-
-  })
+  // wow
+  new WOW().init();
 
 })

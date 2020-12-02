@@ -502,11 +502,11 @@ footer {
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
-.sec-how {
-    h2 {animation-delay: 1s;}
-    p {animation-delay: 2s;}
-    ul {animation-delay: 3s;}
-}
+// .sec-how {
+//     h2 {animation-delay: 1s;}
+//     p {animation-delay: .5s;}
+//     ul {animation-delay: 1s;}
+// }
 @keyframes ani-effect {
     0% {
         opacity: 0;

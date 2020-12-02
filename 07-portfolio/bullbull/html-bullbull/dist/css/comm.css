@@ -680,21 +680,6 @@ footer * {
           animation-fill-mode: forwards;
 }
 
-.sec-how h2 {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.sec-how p {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-.sec-how ul {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
 @-webkit-keyframes ani-effect {
   0% {
     opacity: 0;
