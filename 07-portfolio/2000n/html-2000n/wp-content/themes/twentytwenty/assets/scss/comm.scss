@@ -1,0 +1,106 @@
+/* 나눔스퀘어 웹폰트 */
+@import url(../fonts/NanumSquare-master/nanumsquare.css);
+
+$blue : #1086ce;
+
+.happy {
+    // background: transparent url(../../images/pc.png) 50% 0 no-repeat;
+
+    #site-header {
+        // opacity: .8;
+        border-bottom: 1px solid #d7d7d7;
+    }
+
+    .section-inner {
+        width: 1200px;
+    }
+
+    .header-util {
+        background: #EDEDED;
+        .section-inner {
+            display: flex; justify-content: flex-end;
+            height: 30px;
+        }
+        a {
+            display: inline-block; position: relative;
+            height: 100%; padding-left: 30px;
+            font-size: 14px;
+            line-height: 27px;
+            &::before {
+                content: '';
+                width: 1px; height: 10px;
+                background: red;
+                position: absolute;top: 9px;left: 15px;
+            }
+        }
+    }
+
+    .header-inner {
+        padding: 0;
+    }
+
+    .row {
+        width: 100% !important;
+        max-width: none !important;
+    }
+
+    .site-title a {
+        display: block;
+        width: 250px;height: 51px;
+        background: url(../../images/comm/img-comm.png) 0 -160px no-repeat;
+        text-indent: -9999px;
+    }
+    .primary-menu {
+        margin: 0;
+        // 1depth
+        > li {
+            margin: 0;
+            &:hover, &:focus, &.focus {
+                background: $blue;
+                > a {
+                    color: #fff;
+                }
+            }
+            .icon {
+                display: none;
+            }
+            > a {
+                display: block;
+                height: 90px;padding: 0 50px !important;
+                font-size: 20px;color: #333;font-weight: 700;
+                line-height: 90px;
+            }
+        }
+        // 2depth
+        .sub-menu {
+            top: 100%;
+            // right: 50%;opacity: 1; /* 다시 주석처리 */
+            transform: translate(50%, 40px);
+            width: 100%;
+            background: #fff !important;
+            border: 1px solid #d7d7d7;
+            border-top: 3px solid $blue;
+            font-size: 16px;
+            border-radius: 0 0 0.4rem  0.4rem;
+            &::after{
+                display: none;
+            }
+            &:focus {
+                right: 50%;top: 100%;
+            }
+            li {
+                &:hover, &:focus {
+                    background: #eee;
+                }
+            }
+        }
+    }
+    .primary-menu li.menu-item-has-children:hover > ul,
+    .primary-menu li.menu-item-has-children:focus > ul,
+    .primary-menu li.menu-item-has-children.focus > ul {
+        right: 50%;
+        opacity: 1;
+        transform: translate(50%, 0);
+        transition: opacity 0.15s linear, transform 0.15s linear;
+    }
+}
