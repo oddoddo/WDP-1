@@ -4,6 +4,8 @@
 @import 'variables';
 @import 'mixin';
 
+// 가로 값이 992px 이상일 경우 (pc 버전)
+
 /* layout */
 .container {
     position: relative;
@@ -519,6 +521,81 @@ footer {
         transform: translateY(0)
     }
 }
+
+// 가로 값이 [600px < w < 992px] 이하일 경우 (tablet 버전)
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 90%;
+    }
+    .navbar.sticky {
+        padding: 1rem 1rem .5rem;
+    }
+    .sec-intro {
+        height: 500px;
+        .col-left {
+            padding-top: 20px;
+            transform: scale(.7);
+        }
+        .col-right {
+            top: -80px;
+            transform: scale(.6);
+        }
+    }
+    .sec-how {
+        ul {
+            margin: 67px -2% 0 -2%;
+        }
+    }
+    .sec-video {
+        .container {
+            max-width: 90%;
+        }
+    }
+    .slide .slick-slide {
+        padding: 0;
+    }
+    .sec-count {
+        ul {
+            margin: auto;
+        }
+        li {
+            width: auto;
+        }
+    }
+
+
+  }
+
+//   가로 값이 [0 < w < 600px] 이하일 경우 (mobile 버전)
+  @media screen and (max-width: 600px) {
+    .sec-intro {
+        // height: auto;
+        height: 720px;
+        .container {
+            max-width: 90%;
+        }
+        .col-right {
+            // position: static;
+            // display: none;
+            top: 130px;
+            right: 50%; transform: translateX(50%) scale(.6);
+        }
+        .col-left {
+            position: absolute;top: 0;left: 50%;
+            width: auto;
+            padding-top: 0;
+            transform: translate(-50%, -12%) scale(0.7);
+            text-align: center;
+            h1 {
+                margin: 27px auto 39px;
+            }
+            em {
+                font-size: 1.675em;
+                font-weight: 700;
+            }
+        }
+    }
+  }
 
 
 

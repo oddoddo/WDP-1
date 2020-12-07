@@ -77,6 +77,28 @@ $(function(){
     dots: true,
     // infinite: true,
     speed: 300,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          centerPadding: '0',
+          infinite: true,
+          autoplay: true,
+          dots: false,
+          arrows : false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          centerPadding: '0',
+          infinite: true,
+          autoplay: true,
+          dots: false,
+          arrows : false
+        }
+      }
+    ]
   });
   
   // 클릭시 해당 해쉬태그로 애니메이션 되면서 이동
