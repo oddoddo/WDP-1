@@ -149,4 +149,22 @@ $blue : #1086ce;
         width: 19%;
         background: tomato;
     }
+    a {
+        display: block;
+        height: 200px; padding: 35px 23px;
+        // w100% 기본,  높이값은 원래 자기의 높이값
+    }
+    h2 {
+        margin-bottom: 31px;
+        font-size: 19px; font-weight: 700;
+        color: #fff;
+    }
+    em {
+        font-family: Verdana; font-size: 30px;
+        color: #fff; line-height: 1;
+    }
+    p {
+        font-size: 16px; font-weight: 400;
+        color: #fff;
+    }
 }

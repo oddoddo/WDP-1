@@ -185,4 +185,30 @@
   width: 19%;
   background: tomato;
 }
+
+.lst-goto a {
+  display: block;
+  height: 200px;
+  padding: 35px 23px;
+}
+
+.lst-goto h2 {
+  margin-bottom: 31px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.lst-goto em {
+  font-family: Verdana;
+  font-size: 30px;
+  color: #fff;
+  line-height: 1;
+}
+
+.lst-goto p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
 /*# sourceMappingURL=comm.css.map */
