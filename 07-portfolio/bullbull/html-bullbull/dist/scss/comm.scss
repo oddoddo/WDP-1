@@ -595,6 +595,22 @@ footer {
             }
         }
     }
+    .slide .slick-active .slide-card {
+        left: 0;
+    }
+
+    .sec-prizes {
+        &::before {
+            transform: scale(.7);
+            transform-origin : top right;
+        }
+        &::after {
+            transform: scale(.7) translateX(-70%);
+        }
+    }
+
+
+
   }
 
 

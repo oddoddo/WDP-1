@@ -779,5 +779,18 @@ footer * {
     font-size: 1.675em;
     font-weight: 700;
   }
+  .slide .slick-active .slide-card {
+    left: 0;
+  }
+  .sec-prizes::before {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
+  }
+  .sec-prizes::after {
+    -webkit-transform: scale(0.7) translateX(-70%);
+            transform: scale(0.7) translateX(-70%);
+  }
 }
 /*# sourceMappingURL=comm.css.map */
