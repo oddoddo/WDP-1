@@ -1,6 +1,12 @@
 @charset "UTF-8";
 /* 나눔스퀘어 웹폰트 */
 @import url(../fonts/NanumSquare-master/nanumsquare.css);
+.container {
+  position: relative;
+  width: 1200px;
+  max-width: none;
+}
+
 .happy #site-header {
   border-bottom: 1px solid #d7d7d7;
 }
@@ -30,6 +36,10 @@
   padding-left: 30px;
   font-size: 14px;
   line-height: 27px;
+}
+
+.happy .header-util a:first-child::before {
+  display: none;
 }
 
 .happy .header-util a::before {
@@ -125,5 +135,54 @@
   transition: opacity 0.15s linear, -webkit-transform 0.15s linear;
   transition: opacity 0.15s linear, transform 0.15s linear;
   transition: opacity 0.15s linear, transform 0.15s linear, -webkit-transform 0.15s linear;
+}
+
+.top-area {
+  background: url(../../images/main/slide-top.jpg) 50% 0 no-repeat;
+  background-size: cover;
+}
+
+.top-area .container {
+  height: 470px;
+}
+
+.top-area .top-txt {
+  position: absolute;
+  top: 102px;
+  left: 0;
+}
+
+.top-area .top-txt em {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.top-area .top-txt strong {
+  display: block;
+  margin: 15px 0 12px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #0072bc;
+}
+
+.top-area .top-txt p {
+  font-size: 15px;
+}
+
+.lst-goto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.lst-goto li {
+  width: 19%;
+  background: tomato;
 }
 /*# sourceMappingURL=comm.css.map */

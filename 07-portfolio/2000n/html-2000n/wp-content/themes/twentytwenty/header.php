@@ -24,7 +24,7 @@
 
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body <?php body_class(array('happy')); ?>>
 
 		<?php
 		wp_body_open();
@@ -32,9 +32,10 @@
 
 		<header id="site-header" class="header-footer-group" role="banner">
             <div class="header-util">
-                <div class="inner">
-                    <a href="#">로그인</a>
-                    <a href="#">회원가입</a>
+                <div class="section-inner">
+                    <a href="http://xn--hz2b60wxwdfql.com/?page_id=37">로그인</a>
+                    <a href="http://xn--hz2b60wxwdfql.com/?page_id=38">회원가입</a>
+                    <a href="#">사이트맵</a>
                 </div>
             </div>
 			<div class="header-inner section-inner">
